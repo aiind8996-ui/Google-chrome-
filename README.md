@@ -8,7 +8,7 @@ GOOGLE
 <style>
   :root {
     --bg:#0f1724;
-    --glass:rgba(255,255,255,0.05);
+    --glass:rgba(255,255,255,0.08);
     --accent:#3b82f6;
     --text:#e6eef8;
     --muted:#a0aec0;
@@ -37,6 +37,7 @@ GOOGLE
     color:var(--text);
     padding:12px 0;
     position:relative;
+    backdrop-filter:blur(10px);
   }
   .btns{
     position:absolute;
@@ -52,13 +53,20 @@ GOOGLE
     font-size:22px;
     cursor:pointer;
   }
-  /* search bar ko thoda left shift */
+
+  /* सर्च बार अब ग्लास ब्लर इफेक्ट के साथ */
   .search-bar{
     display:flex;
     gap:6px;
-    padding:8px 4px 8px 14px; /* left padding badhaya gaya */
+    padding:8px 4px 8px 14px;
     align-items:center;
+    background:var(--glass);
+    backdrop-filter:blur(14px);
+    border-radius:12px;
+    margin:6px 10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
   }
+
   input{
     flex:1;
     padding:10px 12px;
@@ -117,6 +125,7 @@ GOOGLE
     max-width:400px;
     box-shadow:0 0 20px rgba(0,0,0,0.4);
     text-align:left;
+    backdrop-filter:blur(20px);
   }
   .settings-box h2{
     text-align:center;
@@ -251,7 +260,7 @@ document.getElementById('themeSelect').addEventListener('change', function(){
   } else {
     document.documentElement.style.setProperty('--bg','#0f1724');
     document.documentElement.style.setProperty('--text','#e6eef8');
-    document.documentElement.style.setProperty('--glass','rgba(255,255,255,0.05)');
+    document.documentElement.style.setProperty('--glass','rgba(255,255,255,0.08)');
   }
 });
 </script>
