@@ -3,7 +3,7 @@ GOOGLE
 <html lang="hi">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>🌐 JACK WEBSITE</title>
 <style>
   :root {
@@ -15,16 +15,21 @@ GOOGLE
   }
   html,body{
     height:100%;
+    width:100%;
     margin:0;
+    padding:0;
     background:var(--bg);
     color:var(--text);
     font-family:"Segoe UI",Roboto,sans-serif;
+    overflow:hidden;
   }
   .browser{
     display:flex;
     flex-direction:column;
     height:100vh;
-    padding:10px;
+    width:100vw;
+    margin:0;
+    padding:0;
   }
   .title-bar{
     text-align:center;
@@ -32,14 +37,12 @@ GOOGLE
     font-size:20px;
     background:var(--glass);
     color:var(--text);
-    padding:10px;
-    border-radius:8px;
-    margin-bottom:8px;
+    padding:12px 0;
   }
   .search-bar{
     display:flex;
     gap:6px;
-    margin-bottom:8px;
+    padding:8px;
   }
   input{
     flex:1;
@@ -69,14 +72,14 @@ GOOGLE
   }
   .iframe-wrap{
     flex:1;
-    border-radius:10px;
+    border:none;
     overflow:hidden;
-    border:1px solid rgba(255,255,255,0.1);
   }
   iframe{
     width:100%;
     height:100%;
     border:0;
+    display:block;
   }
 </style>
 </head>
