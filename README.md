@@ -4,7 +4,7 @@ GOOGLE
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>AI Web Browser</title>
+<title>JACK web site</title>
 <style>
   :root {
     --bg:#0f1724; --glass:rgba(255,255,255,0.05);
