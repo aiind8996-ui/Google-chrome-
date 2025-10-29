@@ -13,7 +13,6 @@ GOOGLE
     --text:#e6eef8;
     --muted:#a0aec0;
   }
-
   html,body{
     height:100%;
     width:100%;
@@ -22,25 +21,23 @@ GOOGLE
     background:var(--bg);
     color:var(--text);
     font-family:"Segoe UI",Roboto,sans-serif;
+    overflow:hidden;
     display:flex;
-    flex-direction:column;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
   }
-
   .browser{
     display:flex;
     flex-direction:column;
-    width:95%;
+    height:90vh;
+    width:95vw;
     max-width:480px;
-    height:85vh;
-    border-radius:14px;
+    border-radius:16px;
     overflow:hidden;
-    background:rgba(255,255,255,0.04);
+    background:var(--glass);
+    backdrop-filter:blur(14px);
     box-shadow:0 0 20px rgba(0,0,0,0.4);
-    backdrop-filter:blur(16px);
   }
-
   .title-bar{
     text-align:center;
     font-weight:700;
@@ -49,7 +46,6 @@ GOOGLE
     color:var(--text);
     padding:12px 0;
     position:relative;
-    backdrop-filter:blur(10px);
   }
   .btns{
     position:absolute;
@@ -69,12 +65,12 @@ GOOGLE
   .search-bar{
     display:flex;
     gap:6px;
-    padding:8px 10px;
+    padding:8px 4px 8px 14px;
     align-items:center;
     background:var(--glass);
     backdrop-filter:blur(14px);
-    border-radius:10px;
-    margin:10px;
+    border-radius:12px;
+    margin:8px 10px;
   }
 
   input{
@@ -100,23 +96,22 @@ GOOGLE
     cursor:pointer;
     transition:0.2s;
   }
-  button:hover{opacity:0.9;}
-
+  button:hover{
+    opacity:0.9;
+  }
   .iframe-wrap{
     flex:1;
     border:none;
     overflow:hidden;
-    border-radius:10px;
-    margin:0 10px 10px;
   }
   iframe{
     width:100%;
     height:100%;
     border:0;
-    border-radius:10px;
+    display:block;
   }
 
-  /* Settings panel */
+  /* Settings panel styling */
   .settings-panel{
     position:fixed;
     top:0;left:0;
@@ -173,7 +168,6 @@ GOOGLE
 </style>
 </head>
 <body>
-
 <div class="browser">
   <div class="title-bar">
     🌐 JACK WEBSITE
@@ -276,6 +270,5 @@ document.getElementById('themeSelect').addEventListener('change', function(){
   }
 });
 </script>
-
 </body>
 </html>
