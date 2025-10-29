@@ -190,7 +190,7 @@ GOOGLE
 <!-- Settings Panel -->
 <div class="settings-panel" id="settingsPanel">
   <div class="settings-box">
-    <h2>⚙️ सेटिंग्स</h2>
+    <h2>🔅सेटिंग्स</h2>
 
     <label>🌐 भाषा चुनें:</label>
     <select id="langSelect">
