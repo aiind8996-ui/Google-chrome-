@@ -28,8 +28,6 @@ GOOGLE
     flex-direction:column;
     height:100vh;
     width:100vw;
-    margin:0;
-    padding:0;
   }
   .title-bar{
     text-align:center;
@@ -54,10 +52,12 @@ GOOGLE
     font-size:22px;
     cursor:pointer;
   }
+  /* search bar ko thoda left shift */
   .search-bar{
     display:flex;
     gap:6px;
-    padding:8px;
+    padding:8px 4px 8px 14px; /* left padding badhaya gaya */
+    align-items:center;
   }
   input{
     flex:1;
@@ -129,7 +129,7 @@ GOOGLE
     font-weight:500;
     color:var(--text);
   }
-  select,input[type="checkbox"]{
+  select{
     margin-top:5px;
     width:100%;
     padding:8px;
