@@ -13,6 +13,7 @@ GOOGLE
     --text:#e6eef8;
     --muted:#a0aec0;
   }
+
   html,body{
     height:100%;
     width:100%;
@@ -21,14 +22,25 @@ GOOGLE
     background:var(--bg);
     color:var(--text);
     font-family:"Segoe UI",Roboto,sans-serif;
-    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
   }
+
   .browser{
     display:flex;
     flex-direction:column;
-    height:100vh;
-    width:100vw;
+    width:95%;
+    max-width:480px;
+    height:85vh;
+    border-radius:14px;
+    overflow:hidden;
+    background:rgba(255,255,255,0.04);
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+    backdrop-filter:blur(16px);
   }
+
   .title-bar{
     text-align:center;
     font-weight:700;
@@ -54,17 +66,15 @@ GOOGLE
     cursor:pointer;
   }
 
-  /* सर्च बार अब ग्लास ब्लर इफेक्ट के साथ */
   .search-bar{
     display:flex;
     gap:6px;
-    padding:8px 4px 8px 14px;
+    padding:8px 10px;
     align-items:center;
     background:var(--glass);
     backdrop-filter:blur(14px);
-    border-radius:12px;
-    margin:6px 10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    border-radius:10px;
+    margin:10px;
   }
 
   input{
@@ -90,22 +100,23 @@ GOOGLE
     cursor:pointer;
     transition:0.2s;
   }
-  button:hover{
-    opacity:0.9;
-  }
+  button:hover{opacity:0.9;}
+
   .iframe-wrap{
     flex:1;
     border:none;
     overflow:hidden;
+    border-radius:10px;
+    margin:0 10px 10px;
   }
   iframe{
     width:100%;
     height:100%;
     border:0;
-    display:block;
+    border-radius:10px;
   }
 
-  /* Settings panel styling */
+  /* Settings panel */
   .settings-panel{
     position:fixed;
     top:0;left:0;
@@ -162,6 +173,7 @@ GOOGLE
 </style>
 </head>
 <body>
+
 <div class="browser">
   <div class="title-bar">
     🌐 JACK WEBSITE
@@ -264,5 +276,6 @@ document.getElementById('themeSelect').addEventListener('change', function(){
   }
 });
 </script>
+
 </body>
 </html>
